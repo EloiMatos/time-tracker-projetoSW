@@ -69,13 +69,12 @@
             </p>
     	</div>
     </form>
-    <br>
-    <h2><strong>Jornada de horas:</strong></h2>
+    <h2 class="title">JORNADA DE HORAS:</h2>
       <?php
       	$query = $db->query("SELECT * FROM horas");
       	$rows = $query->fetchAll(PDO::FETCH_ASSOC);
       ?>
-      <table border="0" cellpadding="0" cellspacing="0" width="100%" height="100px" id="backgroundTable">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" width="80%" height="100px" id="backgroundTable">
         <tr>
           <th align="center">Description</th>
           <th align="center">Hora Inicial</th>

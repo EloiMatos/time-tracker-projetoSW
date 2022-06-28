@@ -1,6 +1,6 @@
 <?php
 try {
-	$db = new PDO('mysql:host=localhost;dbname=time_tracker;charset=utf8mb4', "root", "");
+	$db = new PDO('mysql:host=localhost;dbname=exercicio_php;charset=utf8mb4', "root", "1234");
 }
 catch (PDOException $err)
 {

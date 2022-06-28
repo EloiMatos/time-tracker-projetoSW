@@ -1,8 +1,8 @@
 CREATE TABLE `horas` (
   `id` int(11) NOT NULL,
   `description` varchar(250) NOT NULL,
-  `startHours` time(6) NOT NULL,
-  `endHours` time(6) NOT NULL,
+  `startHours` time NOT NULL,
+  `endHours` time NOT NULL,
   `date` date NOT NULL,
   `type` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

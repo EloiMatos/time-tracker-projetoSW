@@ -76,7 +76,7 @@
       ?>
       <table align="center" border="0" cellpadding="0" cellspacing="0" width="80%" height="100px" id="backgroundTable">
         <tr>
-          <th align="center">Description</th>
+          <th align="center">Descrição</th>
           <th align="center">Hora Inicial</th>
           <th align="center">Hora Final</th>
           <th align="center">Data</th>

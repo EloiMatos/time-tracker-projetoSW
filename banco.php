@@ -1,6 +1,6 @@
 <?php
 try {
-	$db = new PDO('mysql:host=localhost;dbname=exercicio_php;charset=utf8mb4', "root", "1234");
+	$db = new PDO('mysql:host=localhost;dbname=exercicio_php;charset=utf8mb4', "root", "");
 }
 catch (PDOException $err)
 {

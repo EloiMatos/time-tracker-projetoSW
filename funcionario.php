@@ -18,6 +18,7 @@
       text-align: center;
     }
         .container-image {
+          background-image: url(fundo.jpg);
           display: table;
           width: 100%;
           height: 100vh;
@@ -40,6 +41,8 @@
             color: white;
             padding: 15px;
         }
+        table, th, td {border:1px solid black;}
+        th { text-align: center;}
   </style>
 </head>
 <body>
@@ -62,16 +65,36 @@
               <option value="Viagem">Viagem</option>
               <option value="Curso">Curso</option>
             </select> <br><br>
-
-
-            <button type="reset" style="background-color:black; color: whitesmoke;" class="label">Limpar</button>
-            <button type="submit" style="background-color:black;color: whitesmoke;"  class="label" onClick="enviar();">Enviar</button>    
-            <a href="listagem.php"><button style="background-color:black; color: whitesmoke;" class="label" type="button">Listar</button></a>
-      
+            <button type="submit" style="background-color:black;color: whitesmoke;padding: 8px 30px;font-weight: bold;"  class="label" onClick="enviar();">Enviar</button>
             </p>
     	</div>
     </form>
-	
+    <br>
+    <h2><strong>Jornada de horas:</strong></h2>
+      <?php
+      	$query = $db->query("SELECT * FROM horas");
+      	$rows = $query->fetchAll(PDO::FETCH_ASSOC);
+      ?>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" height="100px" id="backgroundTable">
+        <tr>
+          <th align="center">Description</th>
+          <th align="center">Hora Inicial</th>
+          <th align="center">Hora Final</th>
+          <th align="center">Data</th>
+          <th align="center">Tipo</th>
+          <th align="center">Excluir</th>
+        </tr>
+        <?php foreach ($rows as $workarea):?>
+          <tr>
+            <td align="center"><?php echo $workarea['description'];?></td>
+            <td align="center"><?php echo $workarea['startHours'];?></td>
+            <td align="center"><?php echo $workarea['endHours'];?></td>
+            <td align="center"><?php echo $workarea['date'];?></td>
+            <td align="center"><?php echo $workarea['type'];?></td>
+            <td align="center"><a href="delete.php?id=<?php echo $workarea['id'];?>">X</a></td>
+          </tr>
+        <?php endforeach;?>
+        </table>
 </body>
 <script>
     function enviar(){

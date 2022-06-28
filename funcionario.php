@@ -57,10 +57,10 @@
             <input type="date" name="date"  class="label" > <br><br>
 
             <label for="type">Tipo:</label>
-            <select class="label" id="exampleFormControlSelect1">
-              <option>Trabalho</option>
-              <option>Viagem</option>
-              <option>Curso</option>
+            <select name="type" class="label" id="exampleFormControlSelect1">
+              <option value="Trabalho">Trabalho</option>
+              <option value="Viagem">Viagem</option>
+              <option value="Curso">Curso</option>
             </select> <br><br>
 
 

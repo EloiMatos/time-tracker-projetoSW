@@ -16,6 +16,6 @@ if ($acao == "adicionar") {
     $q = mysqli_query($conn, $sql);
     if ($q){
         
-        header("Location: index.php");
+        header("Location: funcionario.php");
 }
 }
